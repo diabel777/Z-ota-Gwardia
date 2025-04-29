@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Złota Gwardia</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        #preloader {
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-yellow-300 font-sans">
+    <div id="preloader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+        <div class="animate-spin rounded-full h-24 w-24 border-t-4 border-yellow-300 border-opacity-75"></div>
+    </div>
+    <header class="bg-black border-b border-yellow-500 p-4 flex justify-between items-center">
+        <img src="favicon.ico" alt="Złota Gwardia" class="h-16" />
+        <nav class="space-x-4 text-lg">
+            <a href="#home" class="hover:text-white">Strona główna</a>
+            <a href="#about" class="hover:text-white">O nas</a>
+            <a href="#services" class="hover:text-white">Usługi</a>
+            <a href="#pricing" class="hover:text-white">Cennik</a>
+            <a href="#news" class="hover:text-white">Aktualności</a>
+            <a href="#contact" class="hover:text-white">Kontakt</a>
+        </nav>
+    </header>
+    <section id="home" class="h-screen flex flex-col items-center justify-center text-center p-10">
+        <h1 class="text-5xl font-bold mb-4">Złota Gwardia</h1>
+        <p class="text-xl"><strong>Profesjonalna ochrona w świecie <b>Miasto RP</b></strong></p>
+    </section>
+    <section id="contact" class="p-10 bg-gray-900">
+        <h2 class="text-3xl font-semibold mb-4">Kontakt</h2>
+        <p><strong>Skontaktuj się z nami na Discordzie Miasto RP na kanale <b>kontakt-z-ochroną!</b></strong></p>
+    </section>
+    <footer class="bg-black border-t border-yellow-500 p-4 text-center">
+        <p>&copy; 2025 Złota Gwardia – Wszystkie prawa zastrzeżone.</p>
+    </footer>
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("opacity-0");
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
+    </script>
+</body>
+</html>
