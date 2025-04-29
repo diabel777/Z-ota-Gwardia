@@ -6,8 +6,19 @@
     <title>Złota Gwardia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #preloader {
+            transition: opacity 0.5s ease;
+        }
+    </style>
 </head>
 <body class="bg-black text-yellow-300 font-sans">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+        <div class="animate-spin rounded-full h-24 w-24 border-t-4 border-yellow-300 border-opacity-75"></div>
+    </div>
+
     <header class="bg-black border-b border-yellow-500 p-4 flex justify-between items-center">
         <img src="assets/logo.png" alt="Złota Gwardia" class="h-16">
         <nav class="space-x-4 text-lg">
@@ -101,5 +112,16 @@
     <footer class="bg-black border-t border-yellow-500 p-4 text-center">
         <p>&copy; 2025 Złota Gwardia – Wszystkie prawa zastrzeżone.</p>
     </footer>
+
+    <!-- Preloader script -->
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("opacity-0");
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
+    </script>
 </body>
 </html>
